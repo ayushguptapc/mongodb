@@ -1,3 +1,5 @@
 db.listingsAndReviews.find({ "reviews": { "$size":50 },"accommodates": { "$gt":6 }})
 
 db.companies.find({"offices":{"$elemMatch":{"city":"Seattle"}}}).count()
+
+db.trips.find({"start station location.coordinates.0":{"$lt":-74}}).count()
